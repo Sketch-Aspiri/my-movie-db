@@ -35,4 +35,24 @@ async function getTrendingMoviesPreview(){
     
 }
 
-getTrendingMoviesPreview()
+async function getCategoriesMoviesPreview(){
+    const res=await fetch('https://api.themoviedb.org/3/genre/movie/list?language=en', options)
+    const data=await res.json();
+
+    const categories=data.genres;
+    
+    categories.forEach(categorie => {
+        const CategoriesListPreview=document.querySelector(".categories-list")
+        const categoriesItem=document.createElement("span");
+        categoriesItem.classList.add("categories-item");
+
+        categoriesItem.innerHTML=categorie.name;
+    
+        CategoriesListPreview.appendChild(categoriesItem);
+    });
+
+    
+}
+
+getTrendingMoviesPreview();
+getCategoriesMoviesPreview();
