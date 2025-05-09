@@ -2,13 +2,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Movie DB</title>
+    <title>ASPIRI MOVIES</title>
     <link rel="stylesheet" href="./styles/app.css">
 </head>
 <body>
-    <h1>My Movie DB</h1>
+    <header class="header">
+        <div class="header-top">
+            <button class="menu-btn">=</button>
+            <h1 class="header-tittle">ASPIRI MOVIES</h1>
+            <button class="search-btn">🔍</button>
+        </div>
+        <div class="highlight">
+            <img src="images/romulus_payoff_poster_las_bc34960b.jpeg" alt="higlight movie" class="highlight-img">
+            <div class="highlight-info">
+                <span class="raiting">7.5</span>
+                <span class="duration">1h 55m</span>
+                <h2 class="highlight-tittle">Pelicula recomendada</h2>
+                <p class="highlight-description">Descripcion de la pelicula recomendada</p>
+                <div class="highlight-btn-section">
+                    <button class="trailer-btn">PLAY TRAILER</button>
+                    <button class="detail-btn">DETAILS</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="trending-section">
+            <div class="trending-section-header">
+                <h3 class="trending-section-tittle">Trending</h3>
+                <a href="" class="trending-section-see-all">See All</a>
+            </div>
+            <div class="trending-movie-list">
+                <div class="movie-card">
+                    <img src="images/romulus_payoff_poster_las_bc34960b.jpeg" alt="movie-image" class="movie-card-img">
+                    <h4 class="movie-card-tittle">Titulo</h4>
+                </div>
+                <div class="movie-card">
+                    <img src="images/romulus_payoff_poster_las_bc34960b.jpeg" alt="movie-image" class="movie-card-img">
+                    <h4 class="movie-card-tittle">Titulo</h4>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories-section">
+            <h3 class="categories-section-tittle">Categories</h3>
+            <div class="categories-list">
+                <span class=categories-item>Action</span>
+                <span class=categories-item>Animation</span>
+                <span class=categories-item>Crime</span>
+            </div>
+        </section>
+
+        <section class="popular-section">
+            <div class="popular-section-header">
+                <h3 class="popular-section-tittle">Popular</h3>
+                <a href="" class="popular-section-see-all">See All</a>
+            </div>
+            <div class="popular-movie-list">
+                <div class="movie-card">
+                    <img src="" alt="movie-image" class="movie-card-img">
+                    <h4 class="movie-card-tittle">Titulo</h4>
+                </div>
+                <div class="movie-card">
+                    <img src="" alt="movie-image" class="movie-card-img">
+                    <h4 class="movie-card-tittle">Titulo</h4>
+                </div>
+            </div>
+        </section>
+
+        <section class="upcoming-section">
+            <div class="upcoming-section-header">
+                <h3 class="upcoming-section-tittle">Upcoming</h3>
+                <a href="" class="upcoming-section-see-all">See All</a>
+            </div>
+            <div class="upcoming-movie-list">
+                <div class="movie-card">
+                    <img src="" alt="movie-image" class="movie-card-img">
+                    <h4 class="movie-card-tittle">Titulo</h4>
+                </div>
+                <div class="movie-card">
+                    <img src="" alt="movie-image" class="movie-card-img">
+                    <h4 class="movie-card-tittle">Titulo</h4>
+                </div>  
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© All rights reserved |   Andrés Aspiri 2025</p>
+    </footer>
+
+    <div class="modal hidden" id="highlight-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <p class="modal-description"></p>
+        </div>
+    </div>
 
     <script src="./src/secrets.js"></script>
     <script src="./src/main.js"></script>
+    <script src="./src/modal.js"></script>
 </body>
 </html>
