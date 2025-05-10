@@ -172,7 +172,7 @@ section{
 }
 
 .trending-section-header, 
-.popular-section-header, 
+.playing-section-header, 
 .upcoming-section-header{
     display:flex;
     justify-content: space-between;
@@ -181,20 +181,20 @@ section{
 } 
 
 .trending-section-tittle,
-.popular-section-tittle,
+.playing-section-tittle,
 .upcoming-section-tittle {
     font-size: 1.1rem;
 }
 
 .trending-section-see-all,
-.popular-section-see-all,
+.playing-section-see-all,
 .upcoming-section-see-all {
     font-size: 0.9rem;
     color: var(--primary-color);
 }
 
 .trending-movie-list,
-.popular-movie-list,
+.playing-movie-list,
 .upcoming-movie-list {
     display: flex;
     gap: 0.5rem;
@@ -258,4 +258,87 @@ section{
     font-size: 0.75rem;
     padding: 1rem;
     color: #aaa;
+}
+
+/* --------------- MEDIA QUERIES ---------------------- */
+
+@media (min-width: 768px) {
+    body {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .header-top {
+        position: relative;
+        width: 100vw;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        padding: 1rem;
+        background-color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header-tittle {
+        font-size: 1.8rem
+    }
+
+    .menu-btn, .search-btn {
+        font-size: 1.4rem;
+    }
+
+
+    .highlight-info {
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 90%, transparent);
+        padding: 2rem;
+    }
+
+    .highlight-img {
+        width: 100%;
+        height: 800px;
+        object-fit: cover;
+        border-radius: var(--radius);
+        display: block;
+}
+
+    .highlight-tittle {
+        font-size: 2.5rem;
+    }
+
+    .highlight-description {
+        display: block;
+        max-width: 600px;
+        color: #eee;
+    }
+
+    .trailer-btn,
+    .detail-btn {
+        height: auto;
+        padding: 0.75rem 1.25rem;
+        font-size: 1rem;
+    }
+
+    .movie-card {
+        width: 150px;
+    }
+
+    .movie-card-img {
+        height: 220px;
+    }
+
+    .movie-card-tittle {
+        font-size: 1rem;
+    }
+
+    .categories-item {
+        font-size: 1rem;
+        padding: 0.4rem 1rem;
+    }
+
+    .modal {
+        display: none !important; 
+    }
 }
